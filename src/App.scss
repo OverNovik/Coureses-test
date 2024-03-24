@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  width: 1200px;
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1440px;
+
+@media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+  .App {
+    width: 768px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-desktop) and (max-width: $breakpoint-large) {
+  .App {
+    width: 1200px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+  .App {
+    width: 1440px;
+  }
+}
