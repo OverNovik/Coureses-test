@@ -19,7 +19,6 @@ const ItemsList: React.FC = () => {
           new Set(data.map((course: { tags: string }) => course.tags).flat())
         )
       );
-      console.log(tags);
     };
     fetchCourses();
   }, []);
@@ -31,7 +30,7 @@ const ItemsList: React.FC = () => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row", width: "100%" }}>
+    <div className="container">
       <div>
         <ul className="themes">
           <li
@@ -52,7 +51,7 @@ const ItemsList: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="container">
+      <div className="list">
         {filterCourses().map((course) => (
           <Item
             key={course.id}
